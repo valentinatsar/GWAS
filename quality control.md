@@ -1,5 +1,6 @@
 # Quality Control of 50K genotypes
 PLINK: Whole genome data analysis toolset (https://zzz.bwh.harvard.edu/plink/)
+
 Supports .ped/.map and binary .fam/.bed/.bim format files
 
 ```bash
