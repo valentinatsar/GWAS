@@ -9,7 +9,8 @@ gemma -bfile boutsko_qc_final_sorted_only-pheno -maf 0.0001 -miss 0.2 -gk 1 -o R
 gemma -bfile boutsko_qc_final_sorted_only-pheno -maf 0.0001 -miss 0.2 -k Rmatrix.cXX.txt -eigen -o Decomposition
 
 # 3. Run the GWAS for phenotype "daily grazing activity"
-gemma -bfile boutsko_qc_final_sorted_only-pheno -n 1 -c covar-daily-activity.txt -maf 0.0001 -miss 0.21 -k Rmatrix.cXX.txt -lmm 4 -o GWAS_daily_activity
+gemma -bfile boutsko_qc_final_sorted_only-pheno -n 1 -c covar-daily-activity.txt -maf 0.0001 -miss 0.21 -k Rmatrix.cXX.txt -lmm 4 -o GWAS_daily_activity  # -lmm stands for linear mixed model and "4" option regards three 
+                                                                                                                                                          # different statistical approaches to estimate p-values for each SNP 
 
 
 # 4. Run the GWAS for phenotype "altitude difference"
