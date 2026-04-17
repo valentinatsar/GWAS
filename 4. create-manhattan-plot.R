@@ -1,11 +1,11 @@
 ### Plot gwas results loading first the "Manhattan_plot.R" script and then run the following commands ###
 
 # Read the gwas processed result file for altitude difference
-data<-read.table("GWAS_results-alt_diff_final.txt",header=T)   
+data<-read.table("GWAS_results-daily_activity_final.txt",header=T)   
 
 # Create genome-wide Manhattan plot using Bonferroni correction method with a threshold of 0.05 (5% chance of false positive association)
 # Bonferroni method is a multiple correction approach, adjusting significance across all SNPs tested using the raw p-values
-manhattan(data,limitchromosome=1:26,pch=20, genomewideline=-log10(0.05/length(data$SNP)), suggestiveline=-log10(0.1/length(data$SNP)),cex.axis=0.7)     
+manhattan(data,limitchromosome=1:26,pch=20, genomewideline=-log10(0.05/length(data$SNP)), suggestiveline=-log10(1/length(data$SNP)),cex.axis=0.7)     
 
 # Check the significant SNP markers
 sorted_data <- data[order(data$P), ]
